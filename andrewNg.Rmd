@@ -1,0 +1,148 @@
+# Nuts and bolts of machine learning by andrew ng
+
+## Performance of algorithms vs size of data
+
+* plot shows large NN  $>$ medium NN $>$ small NN $>$ traditional ML as data size increases
+
+* large NN $>>$ traditional ML
+
+* traditional ML performance goes up with small data size but flattens out as data increases significantly
+
+* large NN performance with data increases linearly with size
+
+* Future needs union of high performance computing (HPC) with algorithm development
+
+## Types of deep learning 
+
+1. General neural network
+
+2. conv nets
+
+3. sequence models e.g. LTSM 
+
+4. other:  unsupervised learning, reinforcement learning etc
+
+* most work today is supervised learning in category 1 through 3 with a little bit of transfer learning
+
+* reinforcement learning fantastic for playing video games - but is very "data hungry" which limits its appicability
+
+## end to end deep learning
+
+* traditional audio $\rightarrow$ features $\rightarrow$ phonemes $\rightarrow$ transcript
+
+* end to end:  audio $\rightarrow$ deep learning $\rightarrow$ transcript
+
+* when does it fail?  answer is muddled but there are cases where (it seems) there is not enough data and more traditional "feature engineering" or system design is needed
+
+* in other words, how do you define the function $f(x)=y$ appropriately to design the system?
+
+* *need enough data* for end to end DL to be feasible
+
+## DL recipe
+
+* is training error high?   if so, fix your method  ( bias )
+    * redesign network ( bigger model )
+    * change optimizer
+    * etc
+  
+* once doing well on training set, look at test set  ( variance )
+
+    * if bad , then you are biased to train set: add more data, check regularization etc
+
+* you are done when train error and test error are similar 
+
+    * DL somewhat "magic" way of using data to limit bias-variance trade-off
+    
+## automatic data synthesis
+
+* this will come up ...
+
+## Unified data
+
+* unified data warehouse is essential for driving machine learning
+
+* need this in order to speed up progress
+
+* want to prevent scientists from running around talking to 20 different people in order to get the dataset together
+
+* if your corporation is having trouble with this, then note that data access policy can be discussed 
+
+* what *should not be up for discussion* is whether the data should come into a central warehouse
+
+* "data is like dynamite, you need to put a bunch of it together to make a big bang"
+
+## Does training and test set come from the same distribution?
+
+* it is often *not true* that the train/test set originate from the same distribution
+
+* gap between train / test is "data mismatch"
+
+* how much have you overfit the development (train) set?
+
+* this is the main bottleneck!  i.e. training - training dev - test set mismatch
+
+* to solve data mismatch problem
+    * maybe you need data synthesis? 
+    * or perhaps "domain adaptation" 
+    * or a *new model architecture*
+    
+* eventually you may need a fresh dev set
+
+* Always start with a good metric ( a good notion of $f(x)=y$ )
+
+## iterative DL
+
+* loop between
+    * idea
+    * code
+    * experiment/evaluation
+    
+* driving car example
+    * barcelona
+    * london
+    * munich
+    * paris
+    * want to train on above but still work in milan
+    * how do we get a train/test set from this scenario?
+    * actually need to get data from milan as well!
+    
+## comparing to human level performance: issues
+
+* medical imaging example: 
+    * typical human has 3 percent error looking at image
+    * typical doctor 1 percent error looking at image
+    * experienced doctor has 0.5 percent error 
+    * experienced team of doctors has 0.25 percent error
+
+* should benchmark against team ... 
+
+* but we are often exceeding this performance ... that is a problem
+
+## future of machine learning
+
+* transfer learning or multi-task learning
+
+* lacking theory for the above but it is coming
+
+* bigger the data you have, the better you do in transferring
+
+## ai product management
+
+* switch between
+    * user
+    * product manager
+    * engineer 
+
+* product manager figures out what user wants, e.g. streamlines interface decisions
+
+* pm may also provide data: development and test set
+
+* pm may also provide the metric for the product
+
+* scientist or engineer acquire training data
+
+* scientist or engineer gets system that works on dev and test set
+
+## wrap up
+
+* 
