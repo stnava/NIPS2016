@@ -145,4 +145,14 @@
 
 ## wrap up
 
-* 
+* students ask: how do i get better at machine learning?
+    * read the papers
+    * replicate other results
+    * temptation to "do own thing" can be "too high"
+    * better to start with basics
+    * be sure to get experience with the "dirty work" - very important in reality
+    * people who "become great" do all of these things
+* the hail mary for machine learning "new model architecture" - really knowning when to implement this
+* "machine learning is the new electricity"
+    * we are just learning how to use it
+* andrew will only share printed slides, not electronic copy "slides make sense only if you've seen the presentation"
